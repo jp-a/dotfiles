@@ -2,5 +2,5 @@
 
 To initiate a new mac:
 ```sh
-git clone <repo> in ~/.dotfile
+git clone git@github.com:jp-a/dotfiles.git ~/.dotfile
 ```
