@@ -70,7 +70,14 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	z
+	git
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+	zsh-completions
+)
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,3 +109,18 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# JPA
+bindkey -s '^H' 'll\n'
+bindkey -s '^O' 'cd ..\n'
+
+export HOMEBREW_NO_ENV_HINTS=true
+
+# Deno
+. "/Users/jpa/.deno/env"
+
+
+# AWS
+export AWS_PROFILE=expereo-test
+#export AWS_PROFILE=expereo-dev
+
