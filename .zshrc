@@ -117,7 +117,7 @@ bindkey -s '^O' 'cd ..\n'
 export HOMEBREW_NO_ENV_HINTS=true
 
 # Deno
-. "/Users/jpa/.deno/env"
+#. "/Users/jpa/.deno/env"
 
 
 # AWS
