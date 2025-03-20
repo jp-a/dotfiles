@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+#export PATH=/opt/homebrew/opt/python@3.11/libexec/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -8,7 +9,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="af-magic"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -81,6 +84,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Star Ship
+eval "$(starship init zsh)"
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -121,6 +127,20 @@ export HOMEBREW_NO_ENV_HINTS=true
 
 
 # AWS
-export AWS_PROFILE=expereo-test
+export AWS_PROFILE=expereo-idp
 #export AWS_PROFILE=expereo-dev
 
+# Python
+#eval "$(pyenv init -)"
+#if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+# Claude - Code
+# Configure for Bedrock with Claude 3.7 Sonnet
+export CLAUDE_CODE_USE_BEDROCK=1
+export ANTHROPIC_MODEL='us.anthropic.claude-3-7-sonnet-20250219-v1:0'
+
+# Control prompt caching - set to 1 to disable (see note below)
+export DISABLE_PROMPT_CACHING=0
+
+# JIRA -Cli
+export JIRA_API_TOKEN=ATATT3xFfGF00Tqrm2nhHbnd_g7O036N6DZUHP69RDadMA3g9GzrcKUjMDfV8EnqRjJUGfeJTzaS8NQnDetOAZ_S8T0UZjnh8WlggfIZSWkqPD0JX59by9cxxmVOqQSpCZzvkTuSk1R-uIrsIkskji0Vxf3MnNVLyoOMZjUj6PhVOVHcBL-sfZQ=510515D8
